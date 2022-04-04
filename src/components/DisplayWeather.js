@@ -7,18 +7,17 @@ function DisplayWeather(props) {
         <React.Fragment>
           <div className="maincard">
             <span className="cardtitle">
-              {data.name} , {data.sys.country}. Weather
+              {data.name} , {data.sys.country},
             </span>
             <span className="cardsubtitle">
-              As of {new Date().toLocaleTimeString()}
+            &nbsp; at {new Date().toLocaleTimeString()}
             </span>
 
             <h1>
               {" "}
-              {Math.floor(data.main.temp - 273.15)}
+              {Math.floor(data.main.temp)}
               <sup>o</sup>
             </h1>
-            <span className="weather-main">{data.weather[0].main}</span>
             <span className="weather-description">
               {" "}
               {data.weather[0].description}
